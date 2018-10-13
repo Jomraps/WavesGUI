@@ -14,6 +14,7 @@
         [WavesApp.defaultAssets.BCH]: '/img/assets/bitcoin-cash.svg',
         [WavesApp.defaultAssets.TRY]: '/img/assets/try.svg',
         [WavesApp.defaultAssets.XMR]: '/img/assets/xmr.svg',
+        [WavesApp.defaultAssets.POOLREWARD]: 'img/assets/jomraps.svg',
         [WavesApp.otherAssetsWithIcons.EFYT]: '/img/assets/efyt.svg',
         [WavesApp.otherAssetsWithIcons.WNET]: '/img/assets/wnet.svg'
     };
