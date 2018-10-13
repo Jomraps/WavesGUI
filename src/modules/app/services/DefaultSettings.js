@@ -44,6 +44,7 @@
                         defaultTab: 'singleSend'
                     },
                     pinnedAssetIdList: [
+                        WavesApp.defaultAssets.POOLREWARD,
                         WavesApp.defaultAssets.WAVES,
                         WavesApp.defaultAssets.BTC
                     ],
@@ -73,9 +74,10 @@
                             price: WavesApp.defaultAssets.BTC
                         },
                         watchlist: {
-                            showOnlyFavorite: false,
+                            showOnlyFavorite: true,
                             favourite: [
-                                [WavesApp.defaultAssets.WAVES, WavesApp.defaultAssets.BTC]
+                                [WavesApp.defaultAssets.WAVES, WavesApp.defaultAssets.BTC],
+                                [WavesApp.defaultAssets.POOLREWARD, WavesApp.defaultAssets.BTC]
                             ],
                             activeTab: 'all',
                             list: Object.values(WavesApp.defaultAssets)
