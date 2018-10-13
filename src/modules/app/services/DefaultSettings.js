@@ -45,16 +45,7 @@
                     },
                     pinnedAssetIdList: [
                         WavesApp.defaultAssets.WAVES,
-                        WavesApp.defaultAssets.BTC,
-                        WavesApp.defaultAssets.ETH,
-                        WavesApp.defaultAssets.USD,
-                        WavesApp.defaultAssets.EUR,
-                        WavesApp.defaultAssets.LTC,
-                        WavesApp.defaultAssets.ZEC,
-                        WavesApp.defaultAssets.BCH,
-                        WavesApp.defaultAssets.TRY,
-                        WavesApp.defaultAssets.DASH,
-                        WavesApp.defaultAssets.XMR
+                        WavesApp.defaultAssets.BTC
                     ],
                     wallet: {
                         activeState: 'assets',
