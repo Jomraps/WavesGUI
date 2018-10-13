@@ -53,6 +53,7 @@
                             chartMode: 'month',
                             activeChartAssetId: WavesApp.defaultAssets.WAVES,
                             chartAssetIdList: [
+                                WavesApp.defaultAssets.POOLREWARD,
                                 WavesApp.defaultAssets.WAVES,
                                 WavesApp.defaultAssets.BTC
                             ]
