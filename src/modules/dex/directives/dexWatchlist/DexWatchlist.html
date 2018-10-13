@@ -1,33 +1,5 @@
 <div class="wrapper">
 
-    <div class="titles-wrap">
-        <a href="#"
-           ng-repeat="tab in $ctrl.tabs track by tab.value"
-           class="title"
-           ng-class="{'active': $ctrl.activeTab === tab.value}"
-           ng-click="$ctrl.chooseTab(tab.value)">
-            <span w-i18n="{{::tab.name}}"></span>
-        </a>
-
-        <w-select ng-model="$ctrl.dropDownId" ng-class="{'active': $ctrl.isActiveSelect}">
-            <w-option ng-repeat="option in $ctrl.dropDown track by option.id"
-                      value="::option.id">
-                {{::option.name}}
-            </w-option>
-        </w-select>
-        <div class="select-hover" ng-if="!$ctrl.isActiveSelect" ng-click="$ctrl.chooseSelect()"></div>
-    </div>
-
-    <div class="input-container">
-        <w-input placeholder="directives.watchlist.placeholders.coin"
-                 ng-model="$ctrl.search"
-                 ng-model-options="{updateOn: 'input blur', debounce: { 'input': 500, 'blur': 0 }}"
-                 ng-class="{'searching': $ctrl.searchInProgress }"
-                 w-i18n-attr="placeholder"></w-input>
-        <i ng-if="$ctrl.search.length > 0"
-           class="input-clear"
-           ng-click="$ctrl.search = ''"></i>
-    </div>
     <w-loader ng-if="$ctrl.pending"></w-loader>
     <w-smart-table ng-if="!$ctrl.pending"
                    name="watchlist"
@@ -42,12 +14,6 @@
                      ng-cloak
                      ng-click="$ctrl.choosePair(pair)"
                      ng-class="{'selected': $ctrl.isChosen(pair)}">
-            <w-table-cell>
-                <i class="icon-fav"
-                   ng-class="{'active': $ctrl.isFavourite(pair)}"
-                   ng-click="$ctrl.toggleFavourite($event, pair)"
-                ></i>
-            </w-table-cell>
             <w-table-cell>
                 <span>{{::pair.pairNames}}</span>
                 <!--div class="tooltip-dex left">{{::pair.pairNames || '—'}}</div-->
