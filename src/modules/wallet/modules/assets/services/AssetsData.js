@@ -21,8 +21,15 @@
                             dataset: 'values',
                             key: 'rate',
                             label: 'Rate',
-                            color: '#5a81ea',
-                            type: ['line', 'area']
+                            color: '#209cd8',
+                            type: ['area']
+                        },
+                        {
+                            dataset: 'values',
+                            key: 'rate',
+                            label: 'Rate',
+                            color: '#9ec9ed',
+                            type: ['line']
                         }
                     ],
                     axes: {
@@ -35,6 +42,24 @@
                             ticks: 4,
                             padding: {
                                 max: 4
+                            }
+                        }
+                    },
+                    tooltipHook: function(d){
+                        if (d) {
+                            // d contains the items [{x, y0, y1, raw}, {x, y0, y1, raw}, ...]
+                            // for each series that is currently focused
+                            d.pop();
+                            return {
+                                abscissas: new Date(d[0].row.x).toLocaleString().slice(0,-3),
+                                rows: d.map(function(s){
+                                    return {
+                                        label: s.series.label,
+                                        value: s.row.y1, // the y value
+                                        color: s.series.color,
+                                        id: s.series.id
+                                    }
+                                })
                             }
                         }
                     }
